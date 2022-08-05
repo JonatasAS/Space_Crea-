@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Palanquin&family=Roboto&family=Staatliches&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fftitle: 'Staatliches', cursive;
+  --fftext: 'Palanquin', sans-serif;
+  --ffhidden: 'Roboto', sans-serif;
+  --ffooter: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: hsl(233, 100%, 97%);
+  align-items: center;
+}
+
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  height: 27.9rem;
+  background-color: hsl(218, 17%, 62%);
+  font-family: var(--fftitle)
+}
+
+.logo2 {
+  display: none;
+}
+
+header img {
+  width: 13.7rem;
+  height: 13.7rem;
+  margin: 3.2rem;
+}
+
+header h1 {
+  font-family: var(--fftitle);
+  font-weight: 400;
+  font-size: 4.0rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+
+  max-width: 38.4rem;
+  height: 4.9rem;
+  background-color: hsl(275, 18%, 79%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texthidden {
+  display: none;
+}
+
+main {
+  padding: 1.4rem 3.2rem 2.8rem 3.2rem;
+}
+
+main p {
+  font-family: var(--fftext);
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.5rem;
+  text-align: center;
+  max-width: 30.5rem;
+
+  color: hsl(274, 84%, 12%);
+
+  margin-bottom: 6.3rem;
+}
+
+main img {
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+.img-title {
+  position: relative;
+}
+
+.main-cards,
+main h2 {
+  animation-duration: 1500ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.main-cards {
+  animation-name: movetop;
+}
+
+main h2 {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+  width: 11.2rem;
+  height: 3.5rem;
+  
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  font-family: var(--fftitle);
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 3.4rem;
+  color: hsl(232, 17%, 35%);
+
+  letter-spacing: 0.5px;
+
+  background: hsl(312, 91%, 96%);
+  border-radius: 20px;
+
+  animation-name: godown;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.second-cards {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .page {
+    max-width: 128rem;
+    display: flex;
+    position: relative;
+  }
+
+  header,
+  .second-cards {
+    animation-duration: 1500ms;
+    animation-delay: 200ms;
+  }
+
+  header {
+    animation-name: goleft;
+    height: 72rem;
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    width: 21.4rem;
+    height: 16.7rem;
+    margin: 3.2rem 8.1rem;
+  }
+
+  header h1 {
+    width: 37.7rem;
+    min-height: 7.2rem;
+    font-size: 4.8rem;
+    line-height: 3.4rem;
+  }
+
+  .texthidden {
+    font-family: var(--ffhidden);
+    margin: 3.2rem 4.8rem 12.5rem 5.4rem;
+    display: block;
+    width: 27.5rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: hsl(0, 0%, 100%);
+  }
+
+  main {
+    background: #FFFFFF;
+  }
+
+  main p {
+    display: none;
+  }
+
+  main img {
+    width: 12.2rem;
+    margin: 0;
+  }
+
+  main h2 {
+    display: none;
+  }
+
+  .main-cards {
+    display: none;
+  }
+
+  .img-title {
+    transition-timing-function: ease;
+    transition: transform 250ms;
+  }
+
+  .img-title:hover {
+    transform: scale(1.1);
+  }
+
+  .second-cards {
+    animation-name: godown;
+    background: #FFFFFF;
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+    "A B"
+    "D B"
+    "D E"
+    "C F"
+    "C F";
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+
+  main div:nth-child(5) {
+    grid-area: E;
+  }
+
+  main div:nth-child(6) {
+    grid-area: F;
+  }
+
+  .footer {
+    font-family: var(--ffooter);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: hsl(232, 17%, 35%);
+
+    display: block;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  .footer a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(232, 17%, 35%);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  header, 
+  .second-cards {
+    animation-duration: 1500ms;
+    animation-delay: 200ms;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    animation-fill-mode: backwards;
+  }
+
+  header {
+    animation-name: goright;
+  }
+
+  main {
+    padding: 3.2rem 4rem 2.8rem 4.5rem;
+  }
+
+  main img {
+    width: 100%;
+  }
+
+  .second-cards {
+    animation-name: movetop;
+    gap: 2rem;
+    grid-template-areas:
+    "A B C"
+    "D B F"
+    "D E F";
+  }
+
+  .footer a:hover {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  main {
+    padding: 6.4rem 8.1rem 5.95rem 9.8rem;
+  }
+
+  .second-cards {
+    gap: 3.2rem;
+  }
+
+  .footer {
+    font-size: 1.4rem;
+    margin-top: 5rem;
+  }
+}
+
+@keyframes movetop {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goright {
+
+    0% {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes godown {
+
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+    @keyframes goleft {
+
+    0% {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
