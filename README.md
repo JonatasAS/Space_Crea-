@@ -61,4 +61,7 @@
 
 ## Autor
 
+Jonatas Amorim Silva
+
+https://www.linkedin.com/in/jonatas-amorim-cref25/
 
